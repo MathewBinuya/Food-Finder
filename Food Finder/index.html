@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/Food Finder/components/style.css">
+  <link rel="stylesheet" href="/Food Finder/components/util.css">
+  <title>Food Recipe Finder</title>
+</head>
+<body>
+    <header>
+         <div class="title container">
+             <h1>Recipe Finder</h1>
+         </div>
+    </header>
+   <main>
+        <section class="find-container container">        
+            <p>Find meals for your ingredients</p> 
+            <div class="input-container">  
+                 <input type="text" id="search-input" class="input-design" placeholder="Search for recipes...">
+                 <button class="btn" id="search-btn">Find</button>
+             </div>
+        </section>
+        <section class="container">
+             <div id="recipe"></div>
+        </section>
+   </main>
+    
+    
+    <script src="/Food Finder/index.js"></script>
+</body>
+</html>
