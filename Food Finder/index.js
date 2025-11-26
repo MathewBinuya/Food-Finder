@@ -16,14 +16,15 @@ function displayRecipes(recipes) {
     card.innerHTML = `
       <img src="${recipe.strMealThumb}" alt="${recipe.strMeal}">
       <h3>${recipe.strMeal}</h3>
-      <p>${recipe.strArea} • ${recipe.strCategory}</p>
+      <p>${recipe.strCategory}</p>
+      <h4>${recipe.strArea}</h4>
     `;
     recipesContainer.appendChild(card);
   });
 }
 
-// Initial load
-getRecipes("chicken").then(displayRecipes);
+// default search
+getRecipes("soup").then(displayRecipes);
 
 // Search button
 searchBtn.addEventListener("click", async () => {
@@ -31,6 +32,8 @@ searchBtn.addEventListener("click", async () => {
   if (!query) return;
   const recipes = await getRecipes(query);
   displayRecipes(recipes);
+  searchInput.value = "";
+
 });
 
 // Enter key support
