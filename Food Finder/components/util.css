@@ -101,7 +101,7 @@ input:focus {
   background-color: #1a1a1a;
   color: #ffffff;
   cursor: pointer;
-  border-radius: 40px;
+  border-radius: 15px;
   transition: all 0.4s ease;
   outline: none;
   position: relative;
@@ -133,3 +133,26 @@ input:focus {
   border-color: #666666;
   background: #292929;
 }
+
+
+
+
+
+/* xs */
+/* @media (min-width: 475px) {} */
+
+/* sm */
+/* @media (min-width: 670px) {} */
+
+/* md */
+/* @media (min-width: 768px) {} */
+
+/* lg */
+/* @media (min-width: 1024px) {} */
+
+/* xl */
+/* @media (min-width: 1280px) {} */
+
+/* 2xl */
+/* @media (min-width: 1536px) {} */
+

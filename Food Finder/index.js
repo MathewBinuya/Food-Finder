@@ -2,6 +2,7 @@ const searchInput = document.getElementById('search-input');
 const searchBtn = document.getElementById('search-btn');
 const recipesContainer = document.getElementById('recipe');
 
+
 async function getRecipes(query) {
   const res = await fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${query}`);
   const data = await res.json();
@@ -12,13 +13,20 @@ function displayRecipes(recipes) {
   recipesContainer.innerHTML = "";
   recipes.forEach(recipe => {
     const card = document.createElement("div");
+    const recipeButton = document.createElement("button");
+
     card.className = "card";
+    recipeButton.className = "btn";
+
+    recipeButton.textContent = "Explore";
+
     card.innerHTML = `
       <img src="${recipe.strMealThumb}" alt="${recipe.strMeal}">
       <h3>${recipe.strMeal}</h3>
-      <p>${recipe.strCategory}</p>
-      <h4>${recipe.strArea}</h4>
+      <p>${recipe.strCategory} • ${recipe.strArea} </p>
     `;
+
+    card.appendChild(recipeButton);
     recipesContainer.appendChild(card);
   });
 }
